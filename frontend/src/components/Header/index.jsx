@@ -1,16 +1,27 @@
+import { useContext } from 'react'
 import './style.css'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../../auth/Context'
 
 export default function Header() {
+
+    const { token } = useContext(AuthContext)
+
     return (
         <header>
             <h1>Fullstack</h1>
             <nav>
-                <Link to={'/home'}>
+                <Link to={'/'}>
                     <h2>Home</h2>
                 </Link>
-                <Link to={'/users'}>
-                    <h2>Users</h2>
+                {
+                    !token ? null :
+                        <Link to={'/users'}>
+                            <h2>Users</h2>
+                        </Link>
+                }
+                <Link to={'/login'}>
+                    <h2>Login</h2>
                 </Link>
             </nav>
         </header>

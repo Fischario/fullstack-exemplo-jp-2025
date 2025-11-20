@@ -39,3 +39,13 @@ export const deleteUser = async (id) => {
 
     return response
 }
+
+export const loginUser = async (email, senha) => {
+    const response = await api.post('api/v1/login', { email, senha })
+
+    if (response.status != 200) {
+        throw new Error(response.status)
+    }
+
+    return response.data
+}
