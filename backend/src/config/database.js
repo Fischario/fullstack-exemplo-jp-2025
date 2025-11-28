@@ -8,7 +8,7 @@ class Database {
     init() {
         this.db = new Sequelize({
             database: 'exercicio_sexta_feira',
-            host: 'postgresql://ronaldo:QLWTEYzTXtU8IqOSH4woFR9taQb5RN7d@dpg-d4l2l7npm1nc738ivicg-a.virginia-postgres.render.com/exercicio_sexta_feira',
+            host: 'dpg-d4l2l7npm1nc738ivicg-a',
             port: 5432,
             username: 'ronaldo',
             password: 'QLWTEYzTXtU8IqOSH4woFR9taQb5RN7d',
