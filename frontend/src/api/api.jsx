@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://127.0.0.1:9999/',
+    baseURL: 'https://fullstack-exemplo-jp-2025.onrender.com/',
 })
 
 api.interceptors.request.use(
